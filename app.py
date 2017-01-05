@@ -12,9 +12,9 @@ class CustomType(QtCore.QObject):
 
         self._names = []
 
-    @QtCore.pyqtProperty(list, notify = names_changed)
+    @QtCore.pyqtProperty(QtQml.QQmlListProperty, notify = names_changed)
     def names(self):
-        return self._names
+        return QtQml.QQmlListProperty(str, self, self._names)
     @names.setter
     def names(self, names):
         print('here1')

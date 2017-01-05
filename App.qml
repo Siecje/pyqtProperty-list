@@ -14,6 +14,7 @@ ApplicationWindow {
 
     CustomType {
       id: customType
-      names: []
+      names: ["one", "two"]
+      //names: [] // works
     }
 }
